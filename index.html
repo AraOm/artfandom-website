@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtFandom — Create. Remix. Belong.</title>
+  <meta name="description" content="ArtFandom is the art platform built for teen creators. Share your art, join fandoms, and connect with your creative community." />
+  <style>
+    :root {
+      --bg: #0A0A1A;
+      --surface: #12122a;
+      --accent: #8B5CF6;
+      --accent-hover: #7a48ea;
+      --text: #F1F1F6;
+      --muted: #b8b8cc;
+      --border: #2a2a45;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #171733 0%, var(--bg) 45%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(10, 10, 26, 0.86);
+      z-index: 5;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      font-size: 1.15rem;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    main { padding: 3rem 0 4rem; }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 0 2.5rem;
+    }
+
+    .logo-mark {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1rem;
+      border-radius: 20px;
+      background: linear-gradient(140deg, #8B5CF6 5%, #5b35b7 95%);
+      display: grid;
+      place-items: center;
+      font-size: 1.9rem;
+      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.35);
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin: 0.4rem 0 0.9rem;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.6vw, 1.2rem);
+    }
+
+    .app-store-btn {
+      margin-top: 1.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      padding: 0.8rem 1.15rem;
+      border-radius: 12px;
+      border: 1px solid #303030;
+      background: #000;
+      color: #fff;
+      font-weight: 600;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .app-store-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%);
+      border-radius: 14px;
+      padding: 1.1rem 1.1rem 1rem;
+    }
+
+    .card h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.1rem;
+    }
+
+    .card p { margin: 0; color: var(--muted); }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 1.2rem 0 2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-links a { text-decoration: none; }
+
+    .footer-links a:hover { color: var(--text); }
+
+    @media (min-width: 760px) {
+      .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .features {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card.wide {
+        grid-column: span 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Art<span>Fandom</span></div>
+      <nav class="nav-links" aria-label="Secondary">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="logo-mark" aria-hidden="true">🎨</div>
+      <div class="brand" style="font-size:1.4rem;">Art<span>Fandom</span></div>
+      <h1>Create. Remix. Belong.</h1>
+      <p>
+        The art platform built for teen creators.
+        Share your art, join fandoms, enter challenges,
+        and connect with a community that gets it.
+      </p>
+      <a class="app-store-btn" href="#" aria-label="Download on the App Store">
+        <span style="font-size:1.2rem;" aria-hidden="true"></span>
+        <span>Download on the App Store</span>
+      </a>
+    </section>
+
+    <section aria-label="Features" class="features">
+      <article class="card">
+        <h3>🎨 Post Your Art</h3>
+        <p>Share illustrations, animations, cosplay, and more across 16+ fandom communities.</p>
+      </article>
+      <article class="card">
+        <h3>🔁 Remix &amp; Redraw</h3>
+        <p>Build on other creators' work. Collaborate, remix, and create together.</p>
+      </article>
+      <article class="card">
+        <h3>🔥 Daily Challenges</h3>
+        <p>New art prompts every day. Compete, vote, and win exclusive badges.</p>
+      </article>
+      <article class="card wide">
+        <h3>🎵 Sound Studio</h3>
+        <p>Mix royalty-free tracks and attach custom soundscapes to your posts.</p>
+      </article>
+      <article class="card">
+        <h3>⭐ ArtFandom Pro</h3>
+        <p>Unlock premium stickers, badge frames, and exclusive features.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 ArtFandom · FromWithin App LLC</div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
