@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — ArtFandom</title>
+  <style>
+    :root {
+      --bg: #0A0A1A;
+      --surface: #12122a;
+      --accent: #8B5CF6;
+      --text: #F1F1F6;
+      --muted: #b8b8cc;
+      --border: #2a2a45;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #171733 0%, var(--bg) 45%);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
+    .card {
+      width: min(760px, 100%);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      padding: 1.4rem;
+    }
+    h1 { margin-top: 0; font-size: clamp(1.6rem, 4vw, 2.3rem); }
+    p { color: var(--muted); }
+    ul { padding-left: 1.1rem; }
+    li { margin-bottom: 0.4rem; }
+    a { color: var(--accent); }
+    .home-link {
+      margin-top: 1rem;
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.9rem;
+      border-radius: 10px;
+      color: var(--text);
+    }
+    .home-link:hover { background: #1a1a34; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>ArtFandom Support</h1>
+    <p>Having trouble? We're here to help.</p>
+
+    <p>📧 Email us: <a href="mailto:support@art-fandom.com">support@art-fandom.com</a></p>
+
+    <h2>Common Topics:</h2>
+    <ul>
+      <li>Account &amp; Login issues</li>
+      <li>Reporting inappropriate content</li>
+      <li>Subscription &amp; billing questions</li>
+      <li>How to delete your account</li>
+      <li>Community guidelines</li>
+    </ul>
+
+    <a class="home-link" href="index.html">Back to artfandom.com</a>
+  </main>
+</body>
+</html>
